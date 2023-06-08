@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crear cuenta o iniciar sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bienvenido</h1>
+        <div class="buttons">
+            <button onclick="login()">Iniciar sesión</button>
+            <button onclick="signup()">Crear cuenta</button>
+        </div>
+        <div id="crear-cuenta" class="modal">
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <button type="submit" id="crear-cuenta-btn">Crear cuenta</button>
+            </form>
+        </div>
+        <div id="iniciar-sesion" class="modal">
+            <form>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <button type="submit" id="iniciar-sesion-btn">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </style>
+</body>
+
+</html>

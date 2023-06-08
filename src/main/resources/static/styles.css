@@ -1,0 +1,61 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+.container {
+	margin-top: 100px;
+}
+
+h1 {
+	font-size: 36px;
+	margin-bottom: 30px;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	padding: 10px 20px;
+	margin: 0 10px;
+	border-radius: 5px;
+	border: none;
+    background-color: black;
+    color: white;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+#crear-cuenta-btn {
+	background-color: #3498db;
+}
+
+#iniciar-sesion-btn {
+	background-color: #2ecc71;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, label{
+    font-size: 1.1rem;
+}
+
+form input {
+    margin-bottom: 20px;
+}
+
+form button {
+    margin-top: 20px;
+    
+}
+
+.modal {
+    margin-top: 30px;
+    display: none;
+}

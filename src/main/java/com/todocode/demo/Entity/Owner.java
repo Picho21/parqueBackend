@@ -13,7 +13,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.OneToOne;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,16 +22,19 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name="head")
-public class Head {
+public class Owner {
     @Id
     private Long dni;
     private String name;
     private String lastName;
     private String password;
+    
+    @OneToOne
+    private Users user;
+    
     @Enumerated(EnumType.STRING)
     private Rol rol;
     
     @OneToMany(mappedBy = "head", cascade = CascadeType.ALL)
-    private Set<Admin> admins = new HashSet<>();
+    private Set<Admi> admi = new HashSet<>();
 }

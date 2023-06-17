@@ -1,13 +1,15 @@
 package com.todocode.demo.Entity;
 
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,8 +21,7 @@ import lombok.Setter;
 @Table(name="ticket")
 public class Ticket {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ticket_generator")
-    @SequenceGenerator(name = "ticket_generator", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     @ManyToOne(fetch= FetchType.EAGER)
@@ -34,6 +35,9 @@ public class Ticket {
     
     @ManyToOne(fetch= FetchType.EAGER)
     private Sale sale;
+    
+    @Temporal(TemporalType.DATE)
+    private Date saleDate;
     
     
 }
